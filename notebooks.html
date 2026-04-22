@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>My Virtual Notebooks</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+		<style>
+
+		body{
+		background:#f8f6ff;
+		font-family:Arial;
+		min-height:100vh;
+		display:flex;
+		flex-direction:column;
+		}
+
+		h1{
+		text-align:center;
+		margin-top:30px;
+		color:#6c7aa1;
+		}
+
+		p{
+		color:#777;
+		}
+
+		.subjects{
+		margin-top:35px;
+		}
+
+		.card{
+		background:white;
+		border:none;
+		border-radius:18px;
+		box-shadow:0 3px 8px lightgray;
+		}
+
+		footer{
+		margin-top:auto;
+		background:#dfe7f5;
+		padding:15px;
+		text-align:center;
+		color:#6c7aa1;
+		}
+
+		.math{background:#cfdcff;border:none;}
+		.science{background:#d7f0df;border:none;}
+		.english{background:#ffe4d6;border:none;}
+		.filipino{background:#f2dcff;border:none;}
+		.history{background:#fff0c9;border:none;}
+		.values{background:#d9f2f2;border:none;}
+		.logout{background:#e6dff2;border:none;}
+
+		</style>
+</head>
+
+<body>
+
+<h1>My Virtual Notebooks</h1>
+
+	<p class="text-center">
+	Choose a subject
+	</p>
+
+<div class="container subjects">
+
+	<div class="row g-4">
+
+		<div class="col-md-4">
+			<div class="card p-3">
+
+			<h3>Math</h3>
+				<p>Lessons and notes</p>
+				<button onclick="message()" class="btn math">Open</button>
+
+	</div>
+	</div>
+
+	<div class="col-md-4">
+		<div class="card p-3">
+
+		<h3>Science</h3>
+		<p>Experiments</p>
+		<button onclick="message()" class="btn science">Open</button>
+
+		</div>
+	</div>
+
+		<div class="col-md-4">
+			<div class="card p-3">
+
+			<h3>English</h3>
+			<p>Reading notebook</p>
+			<button onclick="message()" class="btn english">Open</button>
+
+			</div>
+		</div>
+
+		<div class="col-md-4">
+			<div class="card p-3">
+
+			<h3>Filipino</h3>
+			<p>Mga aralin</p>
+			<button onclick="message()" class="btn filipino">Open</button>
+
+			</div>
+		</div>
+
+
+	<div class="col-md-4">
+		<div class="card p-3">
+
+		<h3>Social Studies</h3>
+		<p>History topics</p>
+
+	<button onclick="message()" class="btn history">Open</button>
+
+		</div>
+	</div>
+
+		<div class="col-md-4">
+			<div class="card p-3">
+
+			<h3>Values Education</h3>
+			<p>Reflections</p>
+
+			<button onclick="message()" class="btn values">Open</button>
+			</div>
+		</div>
+
+	</div>
+
+
+	<div class="text-center mt-5 mb-5">
+
+		<button onclick="showSubjects()" class="btn math">
+		Show Subjects
+		</button>
+
+		<button onclick="logout()" class="btn logout">
+		Logout
+		</button>
+
+	<p id="output"></p>
+
+	</div>
+
+</div>
+
+
+<footer>
+Grade 9 ICT Project
+</footer>
+
+
+<script>
+
+	//loop
+	function showSubjects(){
+
+		let subjects=[
+		"Math",
+		"Science",
+		"English",
+		"Filipino",
+		"Social Studies",
+		"Values Education"
+		];
+
+	let text="Subjects:<br>";
+
+	for(let i=0;i<subjects.length;i++){
+
+	text+=subjects[i]+"<br>";
+
+	}
+
+		document.getElementById("output").innerHTML=text;
+
+		}
+
+
+		function message(){
+		alert("Not available at this time.");
+		}
+
+		//logout
+		function logout(){
+
+		let confirmLogout=
+		confirm("Exit now?");
+
+		if(confirmLogout){
+		window.location.href="index.html";
+		}
+		}
+
+</script>
+
+</body>
+</html>
