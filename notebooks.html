@@ -134,10 +134,6 @@
 
 	<div class="text-center mt-5 mb-5">
 
-		<button onclick="showSubjects()" class="btn math">
-		Show Subjects
-		</button>
-
 		<button onclick="logout()" class="btn logout">
 		Logout
 		</button>
@@ -156,29 +152,8 @@ Grade 9 ICT Project
 
 <script>
 
-	//loop
-	function showSubjects(){
-
-		let subjects=[
-		"Math",
-		"Science",
-		"English",
-		"Filipino",
-		"Social Studies",
-		"Values Education"
-		];
-
-	let text="Subjects:<br>";
-
-	for(let i=0;i<subjects.length;i++){
-
-	text+=subjects[i]+"<br>";
-
-	}
 
 		document.getElementById("output").innerHTML=text;
-
-		}
 
 
 		function message(){
